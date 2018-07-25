@@ -26,7 +26,7 @@ Create a MySQL database for this script. Something like this will work:
 
 `CREATE TABLE log (country VARCHAR(255), ip VARCHAR(255), id INT AUTO_INCREMENT PRIMARY KEY);`
 
-`GRANT INSERT on log.* to 'geo'@'localhost' identified by 'password';`
+`GRANT INSERT, SELECT on log.* to 'geo'@'localhost' identified by 'password';`
 
 Then edit geoIP.py to include your database information. 
 
