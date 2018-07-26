@@ -3,7 +3,7 @@ from geoip import geolite2 as gl2
 import datetime as dt
 import mysql.connector
 TODAY = dt.datetime.today().strftime("%m-%d")
-ip = open("/opt/geoIP/errors-"+TODAY+".log", "r")
+ip = open("/opt/geoIP/errors.log", "r")
 addr = ip.readlines()
 geodb = mysql.connector.connect (
   host = "localhost",
