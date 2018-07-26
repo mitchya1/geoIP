@@ -25,3 +25,4 @@ for line in addr:
   else:
     print("")
     break
+ip.close()
