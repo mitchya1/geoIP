@@ -13,6 +13,11 @@ geodb = mysql.connector.connect (
 )
 dbcursor = geodb.cursor()
 
+#delete yesterday's logs
+sql = "delete from log where id;"
+dbcursor.execute(sql)
+geodb.commit()
+
 for line in addr:
   line = line.rstrip('\n')
   match = gl2.lookup(line)
